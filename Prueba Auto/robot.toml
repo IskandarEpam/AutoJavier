@@ -1,0 +1,4 @@
+[tool.robot]
+outputdir = "."
+log = "log.html"
+report = "report.html"

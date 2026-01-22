@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Log</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #ff0000;
+            --black: #000000;
+            --yellow: #ffff00;
+            --white: #b8b8b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anton', sans-serif;
+            background: var(--white);
+            color: var(--black);
+            padding: 20px;
+        }
+
+        .header {
+            background: var(--yellow);
+            border: 6px solid var(--black);
+            padding: 20px;
+            margin-bottom: 30px;
+            transform: skewY(-2deg);
+        }
+
+        .header h1 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 48px;
+    color: var(--black);
+    -webkit-text-stroke: 3px var(--black);
+    transform: rotate(-2deg);
+    text-align: center;
+}
+
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            background: var(--red);
+            color: var(--yellow);
+            padding: 12px 24px;
+            text-decoration: none;
+            border: 4px solid var(--black);
+            font-family: 'Bangers', cursive;
+            font-size: 20px;
+            display: inline-block;
+            transform: skewY(-2deg);
+            -webkit-text-stroke: 1px var(--black);
+        }
+
+        .nav a:hover {
+            background: var(--black);
+            color: var(--yellow);
+        }
+
+        .log-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .log-item {
+            background: var(--red);
+            padding: 15px;
+            border: 5px solid var(--black);
+            margin-bottom: 15px;
+            transform: skewY(-2deg);
+        }
+
+        .log-item-header {
+            background: var(--black);
+            color: var(--yellow);
+            padding: 15px 20px;
+            border: 4px solid var(--black);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transform: rotate(-1deg);
+            font-family: 'Bangers', cursive;
+            font-size: 24px;
+            -webkit-text-stroke: 1px var(--black);
+        }
+
+        .log-item-header:hover {
+            background: var(--black);
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        .expand-btn {
+            background: var(--yellow);
+            color: var(--black);
+            border: 3px solid var(--black);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .test-name {
+            flex-grow: 1;
+        }
+
+        .status-badge {
+            background: var(--yellow);
+            color: var(--black);
+            padding: 8px 16px;
+            border: 3px solid var(--black);
+            font-family: 'Black Ops One', cursive;
+            font-size: 18px;
+            transform: skewY(3deg);
+            font-weight: bold;
+        }
+
+        .status-badge.PASS {
+            background: var(--yellow);
+        }
+
+        .status-badge.FAIL {
+            background: var(--red);
+            color: var(--yellow);
+        }
+
+        .log-details {
+            background: var(--white);
+            color: var(--black);
+            padding: 15px;
+            border: 4px solid var(--black);
+            margin-top: 10px;
+            transform: skewY(1deg);
+            font-family: 'Bangers', cursive;
+            display: none;
+        }
+
+        .log-details.show {
+            display: block;
+        }
+
+        .log-details p {
+            margin: 8px 0;
+            font-size: 18px;
+            color: var(--black);
+            background: transparent;
+            border: none;
+            padding: 4px 0;
+        }
+
+        .log-details p strong {
+            color: var(--black);
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TEST LOG</h1>
+    </div>
+
+    <div class="nav">
+        <a href="dynamic_report.html">← BACK TO REPORT</a>
+    </div>
+
+    <div class="log-container" id="logContainer">
+        <p>Loading test logs...</p>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById('details-' + id);
+            const btn = document.getElementById('btn-' + id);
+            
+            if (details.classList.contains('show')) {
+                details.classList.remove('show');
+                btn.textContent = '▶';
+            } else {
+                details.classList.add('show');
+                btn.textContent = '▼';
+            }
+        }
+
+        async function loadLog() {
+            try {
+                const response = await fetch('output.xml?t=' + Date.now());
+                const text = await response.text();
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(text, 'text/xml');
+                
+                const tests = xml.querySelectorAll('test');
+                const container = document.getElementById('logContainer');
+                
+                if (tests.length === 0) {
+                    container.innerHTML = '<p>No tests found</p>';
+                    return;
+                }
+                
+                container.innerHTML = '';
+                
+                tests.forEach((test, index) => {
+                    const name = test.getAttribute('name');
+                    const suite = test.parentElement.getAttribute('name');
+                    
+                    const statusElements = Array.from(test.children).filter(child => child.tagName === 'status');
+                    const status = statusElements[statusElements.length - 1];
+                    const statusText = status.getAttribute('status');
+                    const elapsed = status.getAttribute('elapsed');
+                    const duration = elapsed ? (parseInt(elapsed) / 1000000).toFixed(2) + 's' : 'N/A';
+                    const startTime = status.getAttribute('start') || 'N/A';
+                    
+                    const logItem = document.createElement('div');
+                    logItem.className = 'log-item';
+                    logItem.innerHTML = `
+                        <div class="log-item-header" onclick="toggleDetails(${index})">
+                            <div class="expand-btn" id="btn-${index}">▶</div>
+                            <div class="test-name">${name}</div>
+                            <div class="status-badge ${statusText}">${statusText}</div>
+                        </div>
+                        <div class="log-details" id="details-${index}">
+                            <p><strong>Suite:</strong> ${suite}</p>
+                            <p><strong>Status:</strong> ${statusText}</p>
+                            <p><strong>Duration:</strong> ${duration}</p>
+                            <p><strong>Start Time:</strong> ${startTime}</p>
+                        </div>
+                    `;
+                    container.appendChild(logItem);
+                });
+                
+            } catch (error) {
+                console.error('Error loading log:', error);
+                document.getElementById('logContainer').innerHTML = '<p>Error loading test logs</p>';
+            }
+        }
+
+        loadLog();
+    </script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.2 on win32)" generated="2026-01-12T13:05:00.107113" rpa="false" schemaversion="5">
+<suite id="s1" name="PhoneTest" source="C:\Users\JavierJofre\Desktop\Prueba Auto\PhoneTest.robot">
+<test id="s1-t1" name="WebTest" line="10">
+<kw name="FantasyWeb" owner="FantasyMobileWeb">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>${EXECDIR}/Screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2026-01-12T13:05:00.636754" elapsed="0.000839"/>
+</kw>
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2026-01-12T13:05:00.638686" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\JavierJofre\Desktop\Prueba Auto\Screenshots"&gt;C:\Users\JavierJofre\Desktop\Prueba Auto\Screenshots&lt;/a&gt;'.</msg>
+<msg time="2026-01-12T13:05:00.640055" level="INFO" html="true">Emptied directory '&lt;a href="file://C:\Users\JavierJofre\Desktop\Prueba Auto\Screenshots"&gt;C:\Users\JavierJofre\Desktop\Prueba Auto\Screenshots&lt;/a&gt;'.</msg>
+<arg>${EXECDIR}/Screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2026-01-12T13:05:00.637968" elapsed="0.002932"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:00.642197" level="INFO">Opening browser 'Chrome' to base url 'https://www.fantasycritic.games/'.</msg>
+<arg>https://www.fantasycritic.games/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-12T13:05:00.641518" elapsed="4.243904"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-12T13:05:04.885954" elapsed="0.045390"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:06.933001" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:04.931884" elapsed="2.002212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="nav-collapse"]/ul[1]/li[3]/a/span</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:05:06.934664" elapsed="0.062645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:06.998656" level="INFO">Clicking element 'xpath=//*[@id="nav-collapse"]/ul[1]/li[3]/a/span'.</msg>
+<arg>xpath=//*[@id="nav-collapse"]/ul[1]/li[3]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:05:06.997929" elapsed="0.208546"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:09.208593" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:07.207196" elapsed="2.002009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="vue-app"]/div[2]/div/div/main/div/div/div[4]/div/div[1]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:05:09.209743" elapsed="0.114415"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="__BVID__93__row_9efe8e2c-903d-49a0-a954-53c959372034"]/td[1]/span</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-12T13:05:09.324814" elapsed="0.313747"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:11.640155" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:09.639197" elapsed="2.001482"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:11.641834" level="INFO">Clicking element 'xpath=//*[@id="__BVID__93__row_9efe8e2c-903d-49a0-a954-53c959372034"]/td[1]/span'.</msg>
+<arg>xpath=//*[@id="__BVID__93__row_9efe8e2c-903d-49a0-a954-53c959372034"]/td[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:05:11.641133" elapsed="0.098986"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:13.741685" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:11.740687" elapsed="2.001367"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@data-v-5a89ce25 and contains(@aria-describedby, '__bv_popover')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.742331" elapsed="0.028208"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:13.771397" level="INFO">Executing JavaScript:
+window.scrollBy(0, 300);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 300);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.770808" elapsed="0.014049"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:13.811216" level="INFO">Element 'xpath=//a[@data-v-5a89ce25 and contains(text(), 'Saros')]' is displayed.</msg>
+<arg>xpath=//a[@data-v-5a89ce25 and contains(text(), 'Saros')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.785480" elapsed="0.026118"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-01-12T13:05:13.812796" level="INFO">${timestamp} = 20260112_130513</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.811995" elapsed="0.001054"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:13.915508" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/screenshot_20260112_130513.png"&gt;&lt;img src="../Screenshots/screenshot_20260112_130513.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${EXECDIR}/Screenshots/screenshot_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.813416" elapsed="0.102575"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:05:13.944213" level="INFO">${web_tooltip_text} = Saros</msg>
+<var>${web_tooltip_text}</var>
+<arg>xpath=//a[@data-v-5a89ce25 and contains(text(), 'Saros')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.916238" elapsed="0.028204"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-12T13:05:13.945074" level="INFO">Web tooltip text: Saros</msg>
+<arg>Web tooltip text: ${web_tooltip_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-12T13:05:13.944671" elapsed="0.000811"/>
+</kw>
+<status status="PASS" start="2026-01-12T13:05:00.634605" elapsed="13.311116"/>
+</kw>
+<status status="PASS" start="2026-01-12T13:05:00.629249" elapsed="13.317018"/>
+</test>
+<test id="s1-t2" name="MobileTest" line="13">
+<kw name="FantasyMobile" owner="FantasyMobileWeb">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.android.chrome</arg>
+<arg>appActivity=com.google.android.apps.chrome.Main</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-01-12T13:05:13.954826" elapsed="20.000893"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:38.959576" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:33.956733" elapsed="5.004451"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:05:42.793805" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:05:38.961783" elapsed="3.832528"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:05:42.796833" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]'.</msg>
+<msg time="2026-01-12T13:05:43.212651" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:05:42.794638" elapsed="0.419155"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:48.216378" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:43.214675" elapsed="5.002080"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:05:48.218479" level="INFO">Clicking element '//android.widget.Button[@text='No thanks']'.</msg>
+<msg time="2026-01-12T13:05:48.392694" level="INFO">xpath criteria: //android.widget.Button[@text='No thanks']</msg>
+<arg>//android.widget.Button[@text='No thanks']</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:05:48.217003" elapsed="0.177720"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:05:53.400273" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:48.395569" elapsed="5.011152"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:05:55.443626" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:05:53.407320" elapsed="2.038261"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:00.448267" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:05:55.446421" elapsed="5.002689"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:00.452089" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]'.</msg>
+<msg time="2026-01-12T13:06:00.718711" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:00.449591" elapsed="0.269734"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:05.721185" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:00.719978" elapsed="5.001684"/>
+</kw>
+<kw name="Go To Url" owner="AppiumLibrary">
+<arg>https://www.fantasycritic.games/</arg>
+<doc>Opens the ``url`` in the default web browser.</doc>
+<status status="PASS" start="2026-01-12T13:06:05.722068" elapsed="0.556725"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:11.280374" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:06.279272" elapsed="5.002405"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:14.009524" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Toggle navigation"]
+xpath criteria: //android.widget.Button[@content-desc="Toggle navigation"]</msg>
+<arg>//android.widget.Button[@content-desc="Toggle navigation"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:11.282385" elapsed="2.727462"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:14.011830" level="INFO">Clicking element '//android.widget.Button[@content-desc="Toggle navigation"]'.</msg>
+<msg time="2026-01-12T13:06:14.248574" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Toggle navigation"]</msg>
+<arg>//android.widget.Button[@content-desc="Toggle navigation"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:14.010122" elapsed="0.238842"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:19.250540" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:14.249278" elapsed="5.001846"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:19.447470" level="INFO">xpath criteria: //android.view.View[@content-desc="Games"]</msg>
+<arg>//android.view.View[@content-desc="Games"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:19.251527" elapsed="0.196201"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:19.449172" level="INFO">Clicking element '//android.view.View[@content-desc="Games"]'.</msg>
+<msg time="2026-01-12T13:06:19.695164" level="INFO">xpath criteria: //android.view.View[@content-desc="Games"]</msg>
+<arg>//android.view.View[@content-desc="Games"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:19.447965" elapsed="0.248555"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:24.698951" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:19.697144" elapsed="5.002385"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:25.160282" level="INFO">xpath criteria: //android.view.View[@resource-id="__BVID__80__BV_label_"]</msg>
+<arg>//android.view.View[@resource-id="__BVID__80__BV_label_"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:24.699939" elapsed="0.460656"/>
+</kw>
+<kw name="Scroll Down" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:28.102353" level="INFO">xpath criteria: //android.widget.TextView[@text="Saros"]
+Element not visible, scrolling...
+xpath criteria: //android.widget.TextView[@text="Saros"]</msg>
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Scrolls down until the element identified by ``locator`` is found or until the ``timeout`` (Android only) is reached.</doc>
+<status status="PASS" start="2026-01-12T13:06:25.160819" elapsed="2.942200"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:30.104516" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:28.103420" elapsed="2.001482"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:30.106511" level="INFO">Clicking element '//android.widget.TextView[@text="Saros"]'.</msg>
+<msg time="2026-01-12T13:06:30.499773" level="INFO">xpath criteria: //android.widget.TextView[@text="Saros"]</msg>
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:30.105138" elapsed="0.396522"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:32.504072" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:30.502434" elapsed="2.002164"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:32.846499" level="INFO">xpath criteria: //android.view.View[@resource-id="__bv_popover_367__"]</msg>
+<arg>//android.view.View[@resource-id="__bv_popover_367__"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:32.505004" elapsed="0.341795"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:33.249185" level="INFO">xpath criteria: //android.widget.TextView[@text="Saros"]</msg>
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:32.847032" elapsed="0.402483"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2026-01-12T13:06:33.687004" level="INFO">Element '//android.widget.TextView[@text="Saros"]' text is 'Saros' </msg>
+<msg time="2026-01-12T13:06:33.687335" level="INFO">xpath criteria: //android.widget.TextView[@text="Saros"]</msg>
+<msg time="2026-01-12T13:06:33.687624" level="INFO">${mobile_tooltip_text} = Saros</msg>
+<var>${mobile_tooltip_text}</var>
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Returns the text of the element with the ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:33.249770" elapsed="0.438022"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-12T13:06:33.688558" level="INFO">Mobile tooltip text: Saros</msg>
+<arg>Mobile tooltip text: ${mobile_tooltip_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-12T13:06:33.688118" elapsed="0.000652"/>
+</kw>
+<status status="PASS" start="2026-01-12T13:05:13.954198" elapsed="79.734811"/>
+</kw>
+<status status="PASS" start="2026-01-12T13:05:13.950151" elapsed="79.739357"/>
+</test>
+<test id="s1-t3" name="FantasyTest" line="16">
+<kw name="FantasyWebAndMobile" owner="FantasyMobileWeb">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:06:33.709520" level="INFO">Opening browser 'Chrome' to base url 'https://www.fantasycritic.games/'.</msg>
+<arg>https://www.fantasycritic.games/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-12T13:06:33.709212" elapsed="4.262748"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-12T13:06:37.972310" elapsed="0.047531"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:40.020951" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:38.020285" elapsed="2.001284"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="nav-collapse"]/ul[1]/li[3]/a/span</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:40.021903" elapsed="0.033250"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:06:40.055952" level="INFO">Clicking element 'xpath=//*[@id="nav-collapse"]/ul[1]/li[3]/a/span'.</msg>
+<arg>xpath=//*[@id="nav-collapse"]/ul[1]/li[3]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:40.055479" elapsed="0.123673"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:42.180084" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:40.179456" elapsed="2.001236"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="vue-app"]/div[2]/div/div/main/div/div/div[4]/div/div[1]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:42.181176" elapsed="0.034186"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="__BVID__93__row_9efe8e2c-903d-49a0-a954-53c959372034"]/td[1]/span</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-12T13:06:42.215961" elapsed="0.312907"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:44.531220" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:42.529305" elapsed="2.002809"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:06:44.534135" level="INFO">Clicking element 'xpath=//*[@id="__BVID__93__row_9efe8e2c-903d-49a0-a954-53c959372034"]/td[1]/span'.</msg>
+<arg>xpath=//*[@id="__BVID__93__row_9efe8e2c-903d-49a0-a954-53c959372034"]/td[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:44.533290" elapsed="0.188900"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:06:46.723249" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:06:44.722502" elapsed="2.001230"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@data-v-5a89ce25 and contains(@aria-describedby, '__bv_popover')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:46.724174" elapsed="0.028099"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:06:46.753200" level="INFO">Executing JavaScript:
+window.scrollBy(0, 300);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 300);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-01-12T13:06:46.752590" elapsed="0.013012"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:06:46.793363" level="INFO">Element 'xpath=//a[@data-v-5a89ce25 and contains(text(), 'Saros')]' is displayed.</msg>
+<arg>xpath=//a[@data-v-5a89ce25 and contains(text(), 'Saros')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:06:46.766015" elapsed="0.027644"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-12T13:06:46.823787" level="INFO">${web_tooltip_text} = Saros</msg>
+<var>${web_tooltip_text}</var>
+<arg>xpath=//a[@data-v-5a89ce25 and contains(text(), 'Saros')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:06:46.793951" elapsed="0.030359"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-12T13:06:46.825195" level="INFO">Web tooltip text: Saros</msg>
+<arg>Web tooltip text: ${web_tooltip_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-12T13:06:46.824664" elapsed="0.000913"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-12T13:06:46.825968" elapsed="2.260827"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.android.chrome</arg>
+<arg>appActivity=com.google.android.apps.chrome.Main</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-01-12T13:06:49.087195" elapsed="14.940002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:07:09.028880" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:07:04.028098" elapsed="5.001251"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:07:10.296791" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:07:09.029730" elapsed="1.267368"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:07:10.299188" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]'.</msg>
+<msg time="2026-01-12T13:07:10.508023" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/signin_fre_continue_button"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:07:10.297379" elapsed="0.211161"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:07:15.509940" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:07:10.508966" elapsed="5.001432"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:07:15.511665" level="INFO">Clicking element '//android.widget.Button[@text='No thanks']'.</msg>
+<msg time="2026-01-12T13:07:15.658842" level="INFO">xpath criteria: //android.widget.Button[@text='No thanks']</msg>
+<arg>//android.widget.Button[@text='No thanks']</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:07:15.510593" elapsed="0.149213"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:07:20.661742" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:07:15.660502" elapsed="5.002996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-12T13:07:21.853718" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-12T13:07:20.664215" elapsed="1.190432"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:07:26.857506" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:07:21.855648" elapsed="5.002516"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-12T13:07:26.860566" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]'.</msg>
+<msg time="2026-01-12T13:07:27.254782" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</msg>
+<arg>//android.widget.Button[@resource-id="com.android.chrome:id/negative_button"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-12T13:07:26.858545" elapsed="0.397537"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:07:32.258162" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:07:27.256808" elapsed="5.001751"/>
+</kw>
+<kw name="Go To Url" owner="AppiumLibrary">
+<arg>https://www.fantasycritic.games/</arg>
+<doc>Opens the ``url`` in the default web browser.</doc>
+<status status="PASS" start="2026-01-12T13:07:32.258897" elapsed="0.484252"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-12T13:07:37.744785" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-12T13:07:32.743624" elapsed="5.001889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot">
+<msg time="2026-01-12T13:07:39.309245" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<status status="FAIL" start="2026-01-12T13:07:39.308498" elapsed="0.007228">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</status>
+</kw>
+<msg time="2026-01-12T13:07:39.318229" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg time="2026-01-12T13:07:39.331129" level="INFO">xpath criteria: //android.widget.Button[@content-desc="Toggle navigation"]
+xpath criteria: //android.widget.Button[@content-desc="Toggle navigation"]</msg>
+<msg time="2026-01-12T13:07:39.331741" level="FAIL">WebDriverException: Message: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: Could not proxy command to the remote server. Original error: socket hang up
+    at ProxyRequestError.getActualError (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\protocol\errors.ts:960:12)
+    at UIA2Proxy.command (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:330:19)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
+    at wrappedCondFn (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
+    at spin (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</msg>
+<arg>//android.widget.Button[@content-desc="Toggle navigation"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-01-12T13:07:37.745974" elapsed="1.607909">WebDriverException: Message: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: Could not proxy command to the remote server. Original error: socket hang up
+    at ProxyRequestError.getActualError (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\protocol\errors.ts:960:12)
+    at UIA2Proxy.command (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:330:19)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
+    at wrappedCondFn (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
+    at spin (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.Button[@content-desc="Toggle navigation"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.354669" elapsed="0.000374"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.355417" elapsed="0.000287"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.view.View[@content-desc="Games"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.356056" elapsed="0.000353"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.view.View[@content-desc="Games"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.356780" elapsed="0.000311"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.357445" elapsed="0.000303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.view.View[@resource-id="__BVID__80__BV_label_"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.358135" elapsed="0.000322"/>
+</kw>
+<kw name="Scroll Down" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Scrolls down until the element identified by ``locator`` is found or until the ``timeout`` (Android only) is reached.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.358806" elapsed="0.000269"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.359409" elapsed="0.000235"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.359866" elapsed="0.000188"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.360379" elapsed="0.000298"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>//android.view.View[@resource-id="__bv_popover_367__"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.361126" elapsed="0.000609"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.362245" elapsed="0.000391"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<var>${mobile_tooltip_text}</var>
+<arg>//android.widget.TextView[@text="Saros"]</arg>
+<doc>Returns the text of the element with the ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.363057" elapsed="0.000298"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Mobile tooltip text: ${mobile_tooltip_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-01-12T13:07:39.363872" elapsed="0.000387"/>
+</kw>
+<kw name="Compare Tooltip Text" owner="FantasyMobileWeb">
+<arg>${web_tooltip_text}</arg>
+<arg>${mobile_tooltip_text}</arg>
+<status status="NOT RUN" start="2026-01-12T13:07:39.365647" elapsed="0.000564"/>
+</kw>
+<status status="FAIL" start="2026-01-12T13:06:33.708694" elapsed="65.658329">WebDriverException: Message: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: Could not proxy command to the remote server. Original error: socket hang up
+    at ProxyRequestError.getActualError (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\protocol\errors.ts:960:12)
+    at UIA2Proxy.command (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:330:19)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
+    at wrappedCondFn (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
+    at spin (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+</kw>
+<status status="FAIL" start="2026-01-12T13:06:33.695076" elapsed="65.672839">WebDriverException: Message: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: Could not proxy command to the remote server. Original error: socket hang up
+    at ProxyRequestError.getActualError (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\protocol\errors.ts:960:12)
+    at UIA2Proxy.command (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:330:19)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:54:17)
+    at wrappedCondFn (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:114:14)
+    at spin (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:116:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:77:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\JavierJofre\.appium\node_modules\appium-uiautomator2-driver\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)</status>
+</test>
+<status status="FAIL" start="2026-01-12T13:05:00.119218" elapsed="159.263698"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PhoneTest" id="s1" pass="2" fail="1" skip="0">PhoneTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-12T13:07:39.318229" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+</errors>
+</robot>

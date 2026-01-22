@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "caps": [
+    {
+      "type": "text",
+      "enabled": true,
+      "name": "platformName",
+      "value": "Android"
+    },
+    {
+      "type": "text",
+      "enabled": true,
+      "name": "appium:deviceName",
+      "value": "emulator-5554"
+    },
+    {
+      "type": "text",
+      "enabled": true,
+      "name": "appium:automationName",
+      "value": "UiAutomator2"
+    }
+  ],
+  "server": {
+    "local": {},
+    "remote": {
+      "port": "4723",
+      "hostname": "127.0.0.1",
+      "host": "127.0.0.1",
+      "path": "/"
+    },
+    "advanced": {},
+    "sauce": {
+      "dataCenter": "us-west-1"
+    },
+    "headspin": {},
+    "browserstack": {},
+    "lambdatest": {},
+    "testingbot": {},
+    "experitest": {},
+    "roboticmobi": {},
+    "remotetestkit": {},
+    "bitbar": {},
+    "kobiton": {},
+    "perfecto": {},
+    "pcloudy": {},
+    "mobitru": {},
+    "tvlabs": {},
+    "testcribe": {},
+    "webmate": {},
+    "fireflinkdevicefarm": {}
+  },
+  "serverType": "remote",
+  "visibleProviders": []
+}

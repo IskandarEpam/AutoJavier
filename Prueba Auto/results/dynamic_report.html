@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dynamic Test Report</title><style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Bangers&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+        --red: #ff0000;
+        --black: #000000;
+        --yellow: #ffff00;
+        --white: #b8b8b8;
+    }
+    body {
+        font-family: 'Bangers', cursive;
+        background: #1a1a1a;
+        padding: 20px;
+        min-height: 100vh;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: var(--white);
+        border: 8px solid var(--black);
+        box-shadow: 12px 12px 0 var(--red);
+    }
+    .header {
+        background: var(--red);
+        color: var(--yellow);
+        padding: 50px 30px;
+        text-align: center;
+        border-bottom: 8px solid var(--black);
+        transform: skewY(-2deg);
+        margin: -5px -5px 0 -5px;
+    }
+    .header h1 { 
+        font-size: 5em; 
+        font-weight: 900; 
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-family: 'Black Ops One', cursive;
+        -webkit-text-stroke: 5px var(--black);
+        paint-order: stroke fill;
+        text-shadow: 6px 6px 0 var(--black);
+        transform: skewY(2deg) rotate(-2deg);
+        margin-bottom: 20px;
+    }
+    .header-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+        transform: skewY(2deg);
+    }
+    .info-card {
+        background: var(--black);
+        color: var(--yellow);
+        padding: 20px;
+        border: 5px solid var(--black);
+        box-shadow: 6px 6px 0 var(--black);
+        transition: all 0.2s;
+        transform: rotate(-1deg);
+    }
+    .info-card:hover {
+        transform: rotate(-1deg) translate(-4px, -4px);
+        box-shadow: 10px 10px 0 var(--black);
+    }
+    .info-card:nth-child(even) {
+        transform: rotate(1deg);
+        background: var(--red);
+        color: var(--yellow);
+    }
+    .info-card:nth-child(even):hover {
+        transform: rotate(1deg) translate(-4px, -4px);
+    }
+    .info-label { 
+        font-size: 1.3em; 
+        text-transform: uppercase; 
+        letter-spacing: 2px; 
+        font-weight: 900;
+        color: var(--yellow);
+        -webkit-text-stroke: 1px var(--black);
+    }
+    .info-value { 
+        font-size: 3em; 
+        font-weight: 900; 
+        font-family: 'Anton', sans-serif;
+        color: var(--yellow);
+        -webkit-text-stroke: 3px var(--black);
+        paint-order: stroke fill;
+        text-shadow: 4px 4px 0 var(--black);
+    }
+    .controls {
+        padding: 30px 30px;
+        background: var(--white);
+        border-bottom: 6px solid var(--black);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        transform: skewY(-1deg);
+    }
+    label { 
+        font-weight: 900; 
+        text-transform: uppercase; 
+        letter-spacing: 2px;
+        color: var(--black);
+        font-size: 1em;
+        -webkit-text-stroke: 1px var(--black);
+        transform: skewY(1deg);
+    }
+    input, select { 
+        padding: 12px; 
+        border: 4px solid var(--black); 
+        background: var(--white);
+        font-weight: 900;
+        box-shadow: 5px 5px 0 var(--black);
+        font-family: 'Bangers', cursive;
+        font-size: 1em;
+        transform: skewY(1deg);
+    }
+    input:focus, select:focus {
+        outline: none;
+        border-color: var(--red);
+        box-shadow: 5px 5px 0 var(--red);
+        transform: skewY(1deg) translate(-2px, -2px);
+    }
+    button {
+        padding: 14px 28px;
+        background: var(--red);
+        color: var(--yellow);
+        border: 5px solid var(--black);
+        cursor: pointer;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: 6px 6px 0 var(--black);
+        transition: all 0.2s;
+        font-family: 'Bangers', cursive;
+        font-size: 1.1em;
+        -webkit-text-stroke: 2px var(--black);
+        paint-order: stroke fill;
+        transform: skewY(1deg) rotate(-1deg);
+    }
+    button:hover { 
+        transform: skewY(1deg) rotate(-1deg) translate(-3px, -3px);
+        box-shadow: 9px 9px 0 var(--black);
+    }
+    .content { padding: 40px 30px; background: var(--white); }
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    .stat-box {
+        padding: 35px 25px;
+        text-align: center;
+        font-weight: 900;
+        border: 6px solid var(--black);
+        position: relative;
+        transition: all 0.2s;
+        box-shadow: 8px 8px 0 var(--black);
+    }
+    .stat-box:hover {
+        transform: translate(-4px, -4px) rotate(-2deg);
+        box-shadow: 12px 12px 0 var(--black);
+    }
+    .stat-box.pass { 
+        background: var(--black);
+        color: var(--yellow);
+        transform: rotate(-2deg);
+    }
+    .stat-box.fail { 
+        background: var(--red);
+        color: var(--yellow);
+        transform: rotate(2deg);
+    }
+    .stat-box.skip { 
+        background: var(--black);
+        color: var(--yellow);
+        transform: rotate(-1deg);
+    }
+    .stat-box div:last-child {
+        font-size: 1.3em;
+        -webkit-text-stroke: 2px var(--black);
+        paint-order: stroke fill;
+    }
+    .stat-number { 
+        font-size: 4.5em; 
+        font-family: 'Anton', sans-serif;
+        font-weight: 900;
+        letter-spacing: 3px;
+        -webkit-text-stroke: 4px var(--black);
+        paint-order: stroke fill;
+        text-shadow: 5px 5px 0 var(--black);
+        margin-bottom: 5px;
+    }
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-top: 30px;
+        border: 5px solid var(--black);
+    }
+    thead { 
+        background: var(--black);
+        border-bottom: 6px solid var(--black);
+    }
+    th { 
+        padding: 20px 15px; 
+        font-weight: 900; 
+        text-transform: uppercase; 
+        cursor: pointer;
+        letter-spacing: 2px;
+        color: var(--yellow);
+        font-size: 1.1em;
+        font-family: 'Bangers', cursive;
+        -webkit-text-stroke: 2px var(--black);
+        paint-order: stroke fill;
+        border-right: 3px solid var(--red);
+    }
+    th:hover { 
+        background: var(--red);
+        color: var(--yellow);
+    }
+    td { 
+        padding: 15px; 
+        border-bottom: 3px solid var(--black);
+        border-right: 2px solid #999;
+        color: var(--black);
+        font-weight: 700;
+        font-size: 1em;
+    }
+    tbody tr {
+        transition: all 0.2s;
+        background: var(--white);
+    }
+    tbody tr:nth-child(even) { 
+        background: #a8a8a8;
+    }
+    tbody tr:hover { 
+        background: var(--red);
+        color: var(--yellow);
+    }
+    .badge {
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: 900;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 4px solid var(--black);
+        box-shadow: 5px 5px 0 var(--black);
+        transition: all 0.2s;
+        font-family: 'Bangers', cursive;
+        -webkit-text-stroke: 2px var(--black);
+        paint-order: stroke fill;
+        transform: rotate(-2deg);
+    }
+    .badge.PASS { 
+        background: var(--yellow);
+        color: var(--black);
+    }
+    .badge.FAIL { 
+        background: var(--red);
+        color: var(--yellow);
+        transform: rotate(2deg);
+    }
+    .badge.SKIP { 
+        background: var(--black);
+        color: var(--yellow);
+    }
+    .badge:hover { 
+        transform: rotate(-2deg) translate(-3px, -3px);
+        box-shadow: 8px 8px 0 var(--black);
+    }
+    .expand-btn {
+        background: var(--red);
+        border: 4px solid var(--black);
+        cursor: pointer;
+        color: var(--yellow);
+        width: 45px;
+        height: 45px;
+        font-weight: 900;
+        box-shadow: 5px 5px 0 var(--black);
+        transition: all 0.2s;
+        font-size: 1.3em;
+        font-family: 'Anton', sans-serif;
+        -webkit-text-stroke: 2px var(--black);
+        paint-order: stroke fill;
+    }
+    .expand-btn:hover { 
+        transform: translate(-3px, -3px) rotate(-5deg);
+        box-shadow: 8px 8px 0 var(--black);
+    }
+    .detail-row { display: none; }
+    .detail-row.show { 
+        display: table-row; 
+        background: var(--white);
+        border-top: 4px solid var(--red);
+    }
+    .detail-content { 
+        padding: 25px; 
+        background: var(--white);
+        border-top: 5px solid var(--black);
+        border-left: 8px solid var(--red);
+    }
+    .detail-msg { 
+        white-space: pre-wrap; 
+        font-family: 'Courier New', monospace; 
+        background: var(--white);
+        padding: 15px; 
+        border: 4px solid var(--black);
+        box-shadow: 5px 5px 0 var(--black);
+        color: var(--black);
+        font-weight: 700;
+    }
+    .no-data { 
+        text-align: center; 
+        padding: 60px 40px; 
+        color: var(--red); 
+        font-weight: 900;
+        font-size: 2em;
+        -webkit-text-stroke: 3px var(--black);
+        paint-order: stroke fill;
+        text-shadow: 4px 4px 0 var(--black);
+    }
+</style></head><body><div class="container"><div class="header"><h1>⚡ TEST REPORT</h1>
+<p style="margin-top: 15px; font-size: 1.7em;">
+    <a href="dynamic_report.html" style="color: var(--yellow); text-decoration: underline; -webkit-text-stroke: 2px var(--black); margin-right: 30px;">REPORT</a>
+    <a href="dynamic_log.html" style="color: var(--yellow); text-decoration: underline; -webkit-text-stroke: 2px var(--black);">LOG</a>
+</p><div class="header-info"><div class="info-card"><div class="info-label">Total</div><div class="info-value" id="total">0</div></div><div class="info-card"><div class="info-label">Passed</div><div class="info-value" id="pass">0</div></div><div class="info-card"><div class="info-label">Failed</div><div class="info-value" id="fail">0</div></div><div class="info-card"><div class="info-label">Skipped</div><div class="info-value" id="skip">0</div></div><div class="info-card"><div class="info-label">Generated</div><div class="info-value" id="generated">--</div></div></div></div><div class="controls"><div class="control-group"><label>Search</label><input type="text" id="search" placeholder="Test name or message..."></div><div class="control-group"><label>Status</label><select id="status"><option value="">All Tests</option><option value="PASS">Passed</option><option value="FAIL">Failed</option><option value="SKIP">Skipped</option></select></div><div class="control-group"><label>Suite</label><select id="suite"><option value="">All Suites</option></select></div><button onclick="reset()">Reset</button><button onclick="window.print()" style="background:#999;">Print</button></div><div class="content"><div class="stats"><div class="stat-box pass"><div class="stat-number" id="stat-pass">0</div><div>Passed</div></div><div class="stat-box fail"><div class="stat-number" id="stat-fail">0</div><div>Failed</div></div><div class="stat-box skip"><div class="stat-number" id="stat-skip">0</div><div>Skipped</div></div></div><table id="table"><thead><tr><th style="width:40px;"></th><th class="sortable" data-col="name">Test Name</th><th class="sortable" data-col="suite">Suite</th><th class="sortable" data-col="status">Status</th><th class="sortable" data-col="time">Duration</th></tr></thead><tbody id="body"></tbody></table><div id="empty" class="no-data" style="display:none;">No tests found</div></div></div><script>
+let tests = [], suites = new Set(), sort = { col: null, dir: 'asc' };
+
+function load() {
+    fetch('output.xml?t=' + Date.now())
+        .then(r => r.text())
+        .then(xml => {
+            const doc = new DOMParser().parseFromString(xml, 'text/xml');
+            const ts = doc.querySelectorAll('test');
+            
+            const gen = doc.querySelector('robot')?.getAttribute('generated');
+            if (gen) document.getElementById('generated').textContent = new Date(gen).toLocaleTimeString();
+
+            ts.forEach(t => {
+                const name = t.getAttribute('name');
+                
+                // Get the DIRECT child status element of the test (not nested keyword statuses)
+                const statusElements = Array.from(t.children).filter(child => child.tagName === 'status');
+                const st = statusElements[statusElements.length - 1]; // Get the last one (test's own status)
+                
+                if (!st) return;
+                
+                const status = st.getAttribute('status') || 'UNKNOWN';
+                const elapsedAttr = st.getAttribute('elapsed');
+                const time = elapsedAttr ? parseFloat(elapsedAttr) : 0;
+                const msg = ''; // Test level doesn't have messages in the status
+                
+                let suite = 'Unknown';
+                let p = t.parentElement;
+                while (p) {
+                    if (p.tagName === 'suite') {
+                        suite = p.getAttribute('name') || 'Unknown';
+                        break;
+                    }
+                    p = p.parentElement;
+                }
+                
+                suites.add(suite);
+                tests.push({ name, suite, status, msg, time });
+            });
+            
+            document.getElementById('total').textContent = tests.length;
+            update();
+            render();
+            init();
+        })
+        .catch(e => console.error(e));
+}
+
+function update() {
+    const s = { PASS: 0, FAIL: 0, SKIP: 0 };
+    tests.forEach(t => s[t.status]++);
+    document.getElementById('pass').textContent = s.PASS;
+    document.getElementById('fail').textContent = s.FAIL;
+    document.getElementById('skip').textContent = s.SKIP;
+    document.getElementById('stat-pass').textContent = s.PASS;
+    document.getElementById('stat-fail').textContent = s.FAIL;
+    document.getElementById('stat-skip').textContent = s.SKIP;
+}
+
+function init() {
+    document.getElementById('suite').innerHTML = '<option value="">All Suites</option>' +
+        Array.from(suites).sort().map(s => `<option value="${s}">${s}</option>`).join('');
+    document.getElementById('search').addEventListener('input', () => render());
+    document.getElementById('status').addEventListener('change', () => render());
+    document.getElementById('suite').addEventListener('change', () => render());
+    document.querySelectorAll('th.sortable').forEach(h => {
+        h.addEventListener('click', () => {
+            const c = h.dataset.col;
+            if (sort.col === c) sort.dir = sort.dir === 'asc' ? 'desc' : 'asc';
+            else { sort.col = c; sort.dir = 'asc'; }
+            updateSort();
+            render();
+        });
+    });
+}
+
+function updateSort() {
+    document.querySelectorAll('th.sortable').forEach(h => {
+        h.classList.remove('sorted-asc', 'sorted-desc');
+        if (h.dataset.col === sort.col) h.classList.add(`sorted-${sort.dir}`);
+    });
+}
+
+function render() {
+    const search = document.getElementById('search').value.toLowerCase();
+    const status = document.getElementById('status').value;
+    const suite = document.getElementById('suite').value;
+    
+    let filtered = tests.filter(t =>
+        (!search || t.name.toLowerCase().includes(search) || t.msg.toLowerCase().includes(search)) &&
+        (!status || t.status === status) &&
+        (!suite || t.suite === suite)
+    );
+    
+    if (sort.col) {
+        filtered.sort((a, b) => {
+            let av = a[sort.col], bv = b[sort.col];
+            if (typeof av === 'string') { av = av.toLowerCase(); bv = bv.toLowerCase(); }
+            return sort.dir === 'asc' ? av < bv ? -1 : 1 : av > bv ? -1 : 1;
+        });
+    }
+
+    const body = document.getElementById('body');
+    body.innerHTML = '';
+    
+    if (filtered.length === 0) {
+        document.getElementById('empty').style.display = 'block';
+        document.getElementById('table').style.display = 'none';
+        return;
+    }
+
+    document.getElementById('empty').style.display = 'none';
+    document.getElementById('table').style.display = 'table';
+    
+    filtered.forEach((t, i) => {
+        const tr = document.createElement('tr');
+        const durationText = fmt(t.time);
+        tr.innerHTML = `
+            <td><button class="expand-btn" onclick="toggle(${i})">▶</button></td>
+            <td>${esc(t.name)}</td>
+            <td>${esc(t.suite)}</td>
+            <td><span class="badge ${t.status}">${t.status}</span></td>
+            <td>${durationText}</td>
+        `;
+        body.appendChild(tr);
+        
+        const dr = document.createElement('tr');
+        dr.className = `detail-row d${i}`;
+        dr.innerHTML = `<td colspan="5"><div class="detail-content"><p><strong>Duration:</strong> ${durationText}</p></div></td>`;
+        body.appendChild(dr);
+    });
+}
+
+function toggle(i) {
+    const detail = document.querySelector(`.d${i}`);
+    const btn = event.target;
+    detail.classList.toggle('show');
+    btn.classList.toggle('expanded');
+}
+
+function reset() {
+    document.getElementById('search').value = '';
+    document.getElementById('status').value = '';
+    document.getElementById('suite').value = '';
+    sort = { col: null, dir: 'asc' };
+    updateSort();
+    render();
+}
+
+function fmt(seconds) {
+    if (!seconds || seconds === 0) return '0ms';
+    if (seconds < 1) return Math.round(seconds * 1000) + 'ms';
+    if (seconds < 60) return seconds.toFixed(2) + 's';
+    const m = Math.floor(seconds / 60);
+    const s = (seconds % 60).toFixed(2);
+    return m + 'm ' + s + 's';
+}
+
+function esc(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+document.addEventListener('DOMContentLoaded', load);
+</script></body></html>

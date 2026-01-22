@@ -1,0 +1,20 @@
+{
+	"servers": {
+		"atlassian/atlassian-mcp-server": {
+			"type": "http",
+			"url": "https://mcp.atlassian.com/v1/sse",
+			"gallery": "https://api.mcp.github.com",
+			"version": "1.0.0"
+		},
+		"com.postman/postman-mcp-server": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@postman/postman-mcp-server@2.5.4"
+			],
+			"gallery": "https://api.mcp.github.com",
+			"version": "2.5.4"
+		}
+	},
+	"inputs": []
+}

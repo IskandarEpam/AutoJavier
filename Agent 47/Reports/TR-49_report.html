@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TR-49 Game Report</title>
+    <style>
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a3a52;
+            text-align: center;
+            border-bottom: 3px solid #4472C4;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #4472C4;
+            margin-top: 25px;
+            border-left: 4px solid #4472C4;
+            padding-left: 10px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .info-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #4472C4;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .info-value {
+            color: #555;
+            margin-top: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #4472C4;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #333;
+            font-weight: bold;
+        }
+        td {
+            padding: 12px;
+            border: 1px solid #cccccc;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e8f0ff;
+        }
+        .review-box {
+            background-color: #f0f4f8;
+            border-left: 4px solid #4472C4;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .reviewer-name {
+            font-weight: bold;
+            color: #4472C4;
+        }
+        .reviewer-outlet {
+            font-style: italic;
+            color: #666;
+        }
+        .review-quote {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+            border-left: 2px solid #4472C4;
+            padding-left: 10px;
+        }
+        .price-badge {
+            display: inline-block;
+            background-color: #4472C4;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .overview {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            line-height: 1.6;
+        }
+        .metadata {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TR-49 Game Report</h1>
+        
+        <h2>Game Information</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Title</div>
+                <div class="info-value">TR-49</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Developer</div>
+                <div class="info-value">inkle</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Release Date</div>
+                <div class="info-value">January 21, 2026</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Platform</div>
+                <div class="info-value">PC</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Price</div>
+                <div class="info-value"><span class="price-badge">$6.99</span></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Availability</div>
+                <div class="info-value">Now Available</div>
+            </div>
+        </div>
+
+        <h2>Critical Reception</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Critic/Outlet</th>
+                    <th>Reviewer</th>
+                    <th>Score</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Punished Backlog</td>
+                    <td>Amanda Tien</td>
+                    <td>9.6/10</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>So Many Games</td>
+                    <td>Michael Kriess</td>
+                    <td>4.5/5</td>
+                    <td>Excellent</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Detailed Reviews</h2>
+        
+        <div class="review-box">
+            <div class="reviewer-name">The Punished Backlog - Amanda Tien</div>
+            <div class="reviewer-outlet">Score: 9.6/10</div>
+            <div class="review-quote">
+                "I was absolutely riveted by TR-49. I played in two long sessions, finishing the game in about seven hours. However, I wanted more — and so I did something I almost never do, and spent extra time getting 100% of the achievements, discovering multiple endings. TR-49 achieves everything it sets out to do. Furthermore, for its amazingly low price point of $6.99, TR-49 is an absolute bargain for an experience this good."
+            </div>
+        </div>
+
+        <div class="review-box">
+            <div class="reviewer-name">So Many Games - Michael Kriess</div>
+            <div class="reviewer-outlet">Score: 4.5/5</div>
+            <div class="review-quote">
+                "TR-49 is a challenge to the modern gamer's attention span. It asks us to slow down and listen to the whispers of the past, to become readers before we become players. It is a work of restraint, a puzzle box that, once opened, cannot be easily closed. It lingers in the mind like a half-remembered melody, the kind of game that stays with you long after the screen has gone dark."
+            </div>
+        </div>
+
+        <h2>Overview</h2>
+        <div class="overview">
+            <p>
+                TR-49 is a narrative-driven game developed by inkle that combines puzzle-solving, code-breaking, and wartime storytelling with profound reflections on existence. The game features exceptional audio design and offers multiple endings to discover. 
+            </p>
+            <p>
+                <strong>Target Audience:</strong> Perfect for players who enjoy interactive fiction, unconventional gameplay experiences, thought-provoking narratives, strategic puzzle-solving, and games with deep replayability through multiple endings and achievements.
+            </p>
+            <p>
+                <strong>Highlights:</strong>
+                <ul>
+                    <li>Approximately 7 hours of gameplay</li>
+                    <li>Multiple endings and achievements to discover</li>
+                    <li>Exceptional audio design</li>
+                    <li>Affordable price point ($6.99)</li>
+                    <li>Strong critical reception on first release day</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="metadata">
+            <p>Report Generated: January 21, 2026</p>
+            <p>Information Source: OpenCritic</p>
+        </div>
+    </div>
+</body>
+</html>

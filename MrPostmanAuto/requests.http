@@ -1,0 +1,39 @@
+### GET request
+GET https://zelda.fanapis.com/api/games/5f6ce9d805615a85623ec2c9
+
+### POST request
+# POST https://api.restful-api.dev/objects
+# Content-Type: application/json
+
+# {
+#     "id": "20",
+#     "name": "Peach Device 5",
+#     "data": {
+#       "Generation": "3rd",
+#       "Price": "619.99",
+#       "Capacity": "256 GB"
+#     }
+# }
+
+
+### PUT request
+# PUT https://api.restful-api.dev/objects/ff8081819782e69e019bcece94a66ff9
+# Content-Type: application/json
+# {
+#     "id": "ff8081819782e69e019bcece94a66ff9",
+#     "name": "Peach Device 5x",
+#     "data": {
+#       "Generation": "4.5th",
+#       "Price": "799.99",
+#       "Capacity": "1 TB"
+#     }
+
+# }
+
+###PATCH  request
+# PATCH https://api.restful-api.dev/objects/ff8081819782e69e019bcece94a66ff9
+# Content-Type: application/json
+# {
+#     "name": "Peach Device 5.1"
+  
+# }
