@@ -1,0 +1,3 @@
+Test Blazedemo con datos por csv, dos usuarios con vuelo propio.
+
+Test web y mobile integrados, web fantasycritic.com, comparación titulo de tooltip, reporte y log dinámicos con estilo visual utilizando Live Server.

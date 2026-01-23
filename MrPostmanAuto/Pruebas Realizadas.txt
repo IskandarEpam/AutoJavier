@@ -1,0 +1,6 @@
+Automatización de api, utlizando REST Client para prueba manual, TypeScript para automatización.
+
+Request.http contiene los métodos (ejecución manual), api-tests.ts y parser.ts contienen el análisis y script para ejecutar los métodos automatizados incluídos en Request.http.
+Se ejecuta por comando.
+
+Reporte con estilo visual personalizado utilizando como base el reporte dinamico generado en la prueba integrada de robot.

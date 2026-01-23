@@ -1,0 +1,3 @@
+Agente simple que utiliza playwright para conseguir, analizar, y comparar información de la web metacritic y opencritic.
+
+En construcción.

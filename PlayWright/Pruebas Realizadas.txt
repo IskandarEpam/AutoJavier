@@ -1,0 +1,3 @@
+blazedemo utlizando grabación de pantalla (hecho en clase).
+
+blazedemo con csv para dos pasajeros, por script utilizando selección de origen, destino, y vuelos dinámicos al azar.

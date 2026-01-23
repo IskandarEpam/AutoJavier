@@ -1,0 +1,1 @@
+Automatización para crear y eliminar tickets en Jira con asignación de usuario y sprint activo. Se utiliza Python y se ejecuta por comando.
